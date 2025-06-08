@@ -10,32 +10,67 @@ header {
 }
 
 nav {
+  
+
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #20032e;
+  padding: 10px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-radius: 40px;
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+
+  
+
+
+
+
+
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: 800;
-  color: #fff;
+  
+
+
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .nav-links {
+  
+
+
+
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
   text-decoration: none;
   color: #ccc;
   font-weight: 500;
+
+
+
+  
 }
 
 .nav-links li a.active,
 .nav-links li a:hover {
   color: #f0f;
+  border-bottom: 2px solid white;
+
+  
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .btn-contact {
@@ -58,11 +93,7 @@ nav {
   max-width: 50%;
 }
 
-.welcome-text {
-  font-size: 14px;
-  opacity: 0.8;
-  margin-bottom: 10px;
-}
+
 
 h1 {
   font-size: 48px;
@@ -79,17 +110,7 @@ h2 {
   margin: 10px 0;
 }
 
-.highlight {
-  color: #d800ff;
-  font-weight: bold;
-}
 
-.description {
-  font-size: 16px;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  line-height: 1.6;
-}
 
 .buttons {
   display: flex;
@@ -190,6 +211,7 @@ h2 {
   padding: 60px 40px;
   display: flex;
   justify-content: center;
+  
 }
 
 .contact-container {
@@ -197,36 +219,43 @@ h2 {
   max-width: 1200px;
   width: 100%;
   gap: 60px;
+  
 }
 
 .contact-left {
   flex: 1;
   display: flex;
   align-items: center;
+  
 }
 
 .contact-left h2 {
   font-size: 32px;
   font-weight: 800;
   line-height: 1.4;
+  
 }
 
 .contact-left .dot {
   margin-right: 8px;
+  
 }
 
 .contact-right {
   flex: 1;
+  
 }
 
 .contact-right form {
   display: flex;
   flex-direction: column;
+  
 }
 
 .contact-right label {
   margin-top: 20px;
   font-weight: 600;
+  
 }
 
 .contact-right input,
@@ -240,6 +269,7 @@ h2 {
   font-size: 16px;
   outline: none;
   transition: border 0.3s ease;
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
 }
 
 .contact-right input:focus,
@@ -325,6 +355,7 @@ h2 {
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
+    
   }
 
   .buttons {
@@ -379,12 +410,14 @@ h2 {
 
   .project-card {
     padding: 1rem;
+    
   }
 
   .contact-right input,
   .contact-right textarea {
     font-size: 14px;
     padding: 10px;
+    
   }
 
   .send-btn {
@@ -399,5 +432,45 @@ h2 {
 
 
 
+.footer {
+  background-color: #20032e;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  font-size: 0.9rem;
+  border-radius: 40px 40px 40px 40px;
+  box-shadow: 0 -5px 30px rgba(255, 0, 255, 0.2);
+  margin-top: 40px;
+}
+
+.footer .social-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer .social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer .social-icons img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 0.8rem;
+    padding: 15px 5px;
+  }
+
+  .footer .social-icons img {
+    width: 20px;
+    height: 20px;
+  }
+}
 
 
