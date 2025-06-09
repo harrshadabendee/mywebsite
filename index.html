@@ -14,28 +14,31 @@
         <nav>
           <div class="nav-container">
             <div class="logo">Harshada Nagpurree</div>
-            <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- hamburger icon -->
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
           </div>
-
-          <ul class="nav-links" id="nav-links">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">My Projects</a></li>
-            <li><a href="#feedback1">Colleague Interaction</a></li>
-            <li><a href="#creative-corner">Creative Corner</a></li>
-          </ul>
-
-          <a href="#contact-section" class="btn-contact">Connect</a>
+      
+          <div class="mobile-menu" id="mobile-menu">
+            <ul class="nav-links">
+              <li><a href="#" class="active">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">My Projects</a></li>
+              <li><a href="#feedback1">Colleague Interaction</a></li>
+              <li><a href="#creative-corner">Creative Corner</a></li>
+            </ul>
+            <a href="#contact-section" class="btn-contact">Connect</a>
+          </div>
         </nav>
       </header>
-
+      
       <script>
         const toggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
+        const mobileMenu = document.getElementById('mobile-menu');
+      
         toggle.addEventListener('click', () => {
-          navLinks.classList.toggle('show');
+          mobileMenu.classList.toggle('show');
         });
       </script>
+      
 
   <section class="hero">
     <div class="hero-content">
