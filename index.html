@@ -16,29 +16,31 @@
             <div class="logo">Harshada Nagpurree</div>
             <div class="menu-toggle" id="menu-toggle">&#9776;</div>
           </div>
-      
+
           <div class="mobile-menu" id="mobile-menu">
             <ul class="nav-links">
-              <li><a href="#" class="active">Home</a></li>
+              <li><a href="index.html" class="active">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#projects">My Projects</a></li>
+              <li><a href="#contact-section">Connect</a></li>
               <li><a href="#feedback1">Colleague Interaction</a></li>
               <li><a href="#creative-corner">Creative Corner</a></li>
+
             </ul>
-            <a href="#contact-section" class="btn-contact">Connect</a>
+            <!--<a href="#contact-section" class="btn-contact">Connect</a>-->
           </div>
         </nav>
       </header>
-      
+
       <script>
         const toggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
-      
+
         toggle.addEventListener('click', () => {
           mobileMenu.classList.toggle('show');
         });
       </script>
-      
+
 
   <section class="hero">
     <div class="hero-content">
@@ -293,7 +295,6 @@
 
 
 
-      
 
 
 
@@ -302,7 +303,8 @@
 
 
 
-      
+
+
 
 
 
@@ -338,187 +340,230 @@
         <div class="skills-section">
 
 
-
-
-
-
-<style>
-    body {
-      
-      background-color: #150024;
-      font-family: 'Segoe UI', sans-serif;
-      color: #fff;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 40px;
-      background: linear-gradient(to right, #c98fe8, #e9c1f2);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .skill-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .chart-box {
-      background: #1f0133;
-      border-radius: 25px;
-      padding: 20px;
-      box-shadow: 0 0 20px rgba(255, 0, 255, 0.1);
-      max-width: 500px;
-      width: 100%;
-    }
-
-    .text-box {
-      max-width: 400px;
-      width: 100%;
-    }
-
-    .text-box h3 {
-      font-size: 24px;
-      margin-bottom: 20px;
-      color: #ffccff;
-    }
-
-    .badge-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .badge {
-      padding: 10px 16px;
-      border-radius: 20px;
-      background: linear-gradient(to right, #ce9bff, #b99df2);
-      color: #190020;
-      font-weight: bold;
-      font-size: 14px;
-      animation: fadeIn 1.2s ease-in;
-      
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    canvas {
-      background: #24003d;
-      border-radius: 2000px;
-      padding: 1px;
-      
-    }
-
-    @media (max-width: 768px) {
-      .skill-section {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .chart-box, .text-box {
-        max-width: 100%;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <h2>💼 My Skill Matrix</h2>
-
-  <div class="skill-section">
-    <div class="chart-box">
-      <canvas id="skillChart"></canvas>
-    </div>
-    <div class="text-box">
-      <h3>🌟 Soft Skills Highlights</h3>
-      <div class="badge-list">
-        <div class="badge">Team Collaboration</div>
-        <div class="badge">Empathy</div>
-        <div class="badge">Time Management</div>
-        <div class="badge">Adaptability</div>
-        <div class="badge">Leadership</div>
-        <div class="badge">Conflict Resolution</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Chart.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    const ctx = document.getElementById('skillChart').getContext('2d');
-
-    new Chart(ctx, {
-      type: 'radar',
-      data: {
-        labels: [
-          'Client Communication',
-          'Team Leading',
-          'Creative Thinking',
-          'Excel/Data Analysis',
-          'Project Management'
-        ],
-        datasets: [{
-          label: 'Skill Level',
-          data: [97, 95, 85, 79, 87],
-          backgroundColor: 'rgba(216, 112, 255, 0.3)',
-          
-          borderColor: '#ff69d4',
-          borderWidth: 2,
-          pointBackgroundColor: '#fff',
-          pointBorderColor: '#ff66d4',
-        }]
-      },
-      options: {
-        responsive: true,
-        animation: {
-          duration: 1500,
-          easing: 'easeOutExpo'
-        },
-        plugins: {
-          legend: {
-            display: false
-          }
-        },
-        scales: {
-          r: {
-            angleLines: {
-              color: '#663399'
-            },
-            grid: {
-              color: '#663399'
-            },
-            pointLabels: {
-              color: '#fff',
-              font: {
-                size: 14
-              }
-            },
-            ticks: {
-              color: '#fff',
-              stepSize: 20,
-              max: 100,
-              backdropColor: 'transparent'
-            }
-          }
-        }
-      }
-    });
-  </script>
-
+            <section class="mini-skill-section">
+                <h2>💼 Skill Matrix</h2>
+              
+                <div class="mini-skill-container">
+                  <!-- Radar Chart -->
+                  <div class="chart-wrapper">
+                    <canvas id="miniSkillChart"></canvas>
+                    <div class="cursor-pulse"></div>
+                  </div>
+              
+                  <!-- Soft Skills -->
+                  <div class="soft-skills">
+                    <h3>🌟 Soft Skills</h3>
+                    <div class="badge-list">
+                      <span class="badge">Empathy</span>
+                      <span class="badge">Leadership</span>
+                      <span class="badge">Adaptability</span>
+                      <span class="badge">Time Mgmt</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+              <!-- Chart.js CDN -->
+              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+              
+              <script>
+                const ctxMini = document.getElementById('miniSkillChart').getContext('2d');
+              
+                new Chart(ctxMini, {
+                  type: 'radar',
+                  data: {
+                    labels: [
+                      'Client Communication',
+                      'Team Leading',
+                      'Creative Thinking',
+                      'Excel / Data Analysis',
+                      'Project Management'
+                    ],
+                    datasets: [{
+                      label: 'Skill Level',
+                      data: [95, 90, 85, 75, 88],
+                      backgroundColor: 'rgba(255, 51, 204, 0.3)',
+                      borderColor: '#ff33cc',
+                      borderWidth: 2,
+                      pointBackgroundColor: '#fff',
+                      pointBorderColor: '#ff33cc',
+                      pointHoverRadius: 4
+                    }]
+                  },
+                  options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                      duration: 1000,
+                      easing: 'easeOutQuad'
+                    },
+                    plugins: {
+                      legend: { display: false }
+                    },
+                    scales: {
+                      r: {
+                        angleLines: { color: '#6b1a94' },
+                        grid: { color: '#6b1a94' },
+                        pointLabels: {
+                          color: '#fff',
+                          font: { size: 13 }
+                        },
+                        ticks: {
+                          color: '#fff',
+                          stepSize: 20,
+                          max: 100,
+                          backdropColor: 'transparent'
+                        }
+                      }
+                    }
+                  }
+                });
+              
+                // Cursor pulse
+                const chartWrapper = document.querySelector('.chart-wrapper');
+                const cursor = document.querySelector('.cursor-pulse');
+              
+                chartWrapper.addEventListener('mousemove', (e) => {
+                  const rect = chartWrapper.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  const y = e.clientY - rect.top;
+                  cursor.style.left = `${x}px`;
+                  cursor.style.top = `${y}px`;
+                  cursor.style.opacity = 1;
+                });
+              
+                chartWrapper.addEventListener('mouseleave', () => {
+                  cursor.style.opacity = 0;
+                });
+              </script>
+              
+              <style>
+                .mini-skill-section {
+                  background-color: #1a0032;
+                  color: white;
+                  padding: 20px;
+                  border-radius: 14px;
+                  box-shadow: 0 0 10px rgba(255, 51, 204, 0.3);
+                  margin: 20px auto;
+                  max-width: 1200px;
+                }
+              
+                .mini-skill-section h2,
+                .mini-skill-section h3 {
+                  text-align: center;
+                  color: #ff66cc;
+                  font-size: 1.6rem;
+                  margin-bottom: 16px;
+                }
+              
+                .mini-skill-container {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  gap: 30px;
+                  align-items: center;
+                }
+              
+                .chart-wrapper {
+                  width: 550px;  /* ⬅️ wider */
+                  height: 340px; /* ⬅️ shorter */
+                  position: relative;
+                }
+              
+                #miniSkillChart {
+                  width: 100% !important;
+                  height: 100% !important;
+                }
+              
+                .cursor-pulse {
+                  width: 18px;
+                  height: 18px;
+                  border-radius: 50%;
+                  background: rgba(255, 102, 204, 0.3);
+                  position: absolute;
+                  pointer-events: none;
+                  transform: translate(-50%, -50%);
+                  animation: pulse 1s infinite ease-out;
+                  opacity: 0;
+                }
+              
+                @keyframes pulse {
+                  0% {
+                    transform: translate(-50%, -50%) scale(0.8);
+                    opacity: 0.4;
+                  }
+                  50% {
+                    transform: translate(-50%, -50%) scale(1.2);
+                    opacity: 0.6;
+                  }
+                  100% {
+                    transform: translate(-50%, -50%) scale(0.8);
+                    opacity: 0.4;
+                  }
+                }
+              
+                .soft-skills {
+                  max-width: 300px;
+                  text-align: center;
+                }
+              
+                .badge-list {
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 8px;
+                  justify-content: center;
+                }
+              
+                .badge {
+                  background: linear-gradient(to right, #ff33cc, #9933ff);
+                  padding: 6px 14px;
+                  border-radius: 12px;
+                  font-size: 13px;
+                  font-weight: 500;
+                  color: white;
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+              
+                .badge:hover {
+                  transform: scale(1.05);
+                  box-shadow: 0 0 6px rgba(255, 51, 204, 0.3);
+                }
+              
+                @media (max-width: 768px) {
+                  .mini-skill-container {
+                    flex-direction: column;
+                    align-items: center;
+                  }
+              
+                  .chart-wrapper {
+                    width: 360px;
+                    height: 320px;
+                  }
+              
+                  .badge {
+                    font-size: 12px;
+                    padding: 5px 12px;
+                  }
+                }
+              
+                @media (max-width: 480px) {
+                  .chart-wrapper {
+                    width: 320px;
+                    height: 300px;
+                  }
+              
+                  .badge {
+                    font-size: 11.5px;
+                    padding: 4px 10px;
+                  }
+                }
+              </style>
+              
             
+
+
+
+
             <h2>Skills</h2>
             <div class="skill-icons">
               <div class="skill">
@@ -533,13 +578,62 @@
 
 
 
-                
+
                 <img src="i5.png" alt="Excel">
 
               </div>
 
 
               <style>
+
+
+
+
+
+
+/* ✅ Responsive Fix Starts Here */
+@media (max-width: 768px) {
+    .skill {
+      width: 100%; /* ✅ makes the skill box take full screen width */
+      padding: 5px; /* ✅ adds spacing for better layout */
+    }
+
+    .skill img {
+      width: 90%; /* ✅ image scales on smaller screens */
+      height: auto; /* ✅ maintain image aspect ratio */
+    }
+
+    .skill-icons {
+      flex-direction: column; /* ✅ stack skill cards vertically */
+      align-items: center;    /* ✅ center them */
+    }
+
+    .chart-box,
+    .text-box {
+      width: 100%; /* ✅ make radar chart and text fit mobile width */
+      padding: 10px;
+    }
+
+    .skill-section {
+      flex-direction: column; /* ✅ stack chart and text box */
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 .skills-section {
                   text-align: center;
                   padding: 1px;
@@ -1597,7 +1691,6 @@ color: white; padding: 40px 20px; border-radius: 40px; margin: 40px auto; max-wi
 
 
 
-  
 
 
 
@@ -1611,19 +1704,20 @@ color: white; padding: 40px 20px; border-radius: 40px; margin: 40px auto; max-wi
 
 
 
-      
-
-      
 
 
 
 
 
 
-      
 
 
-      
+
+
+
+
+
+
 
 
 
