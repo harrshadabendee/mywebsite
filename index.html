@@ -10,20 +10,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">Harshada Nagpurree</div>
-      <ul class="nav-links">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">My Projects</a></li>
+    <header>
+        <nav>
+          <div class="nav-container">
+            <div class="logo">Harshada Nagpurree</div>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- hamburger icon -->
+          </div>
 
-        <li><a href="#feedback1">Colleague Interaction</a></li>
-        <li><a href="#test"></a></li>
-      </ul>
-      <a href="#contact-section" class="btn-contact">Connect</a>
-    </nav>
-  </header>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">My Projects</a></li>
+            <li><a href="#feedback1">Colleague Interaction</a></li>
+            <li><a href="#creative-corner">Creative Corner</a></li>
+          </ul>
+
+          <a href="#contact-section" class="btn-contact">Connect</a>
+        </nav>
+      </header>
+
+      <script>
+        const toggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        toggle.addEventListener('click', () => {
+          navLinks.classList.toggle('show');
+        });
+      </script>
 
   <section class="hero">
     <div class="hero-content">
@@ -34,12 +46,17 @@
         With a detail-oriented mindset and commitment to service excellence, I help ensure efficient activation and client satisfaction at every step.</p>
       <div class="buttons">
         <a href="#projects" class="btn-primary">My Projects</a>
-        <!--  <a href="#" class="btn-outline">Download CV</a>-->
+        <!--<a href="#" class="btn-outline">Download CV</a>-->
 
 
 
 
- <!--Start of Tawk.to Script-->
+
+
+
+
+
+        <!--Start of Tawk.to Script-->
 <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
@@ -52,6 +69,12 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
+
+
+
+
+
+
 
 
 
@@ -256,10 +279,258 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="skills-section">
+
+
+
+
+
+
+<style>
+    body {
+      
+      background-color: #150024;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 40px;
+      background: linear-gradient(to right, #c98fe8, #e9c1f2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .skill-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .chart-box {
+      background: #1f0133;
+      border-radius: 25px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .text-box {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .text-box h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #ffccff;
+    }
+
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .badge {
+      padding: 10px 16px;
+      border-radius: 20px;
+      background: linear-gradient(to right, #ce9bff, #b99df2);
+      color: #190020;
+      font-weight: bold;
+      font-size: 14px;
+      animation: fadeIn 1.2s ease-in;
+      
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    canvas {
+      background: #24003d;
+      border-radius: 2000px;
+      padding: 1px;
+      
+    }
+
+    @media (max-width: 768px) {
+      .skill-section {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .chart-box, .text-box {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>💼 My Skill Matrix</h2>
+
+  <div class="skill-section">
+    <div class="chart-box">
+      <canvas id="skillChart"></canvas>
+    </div>
+    <div class="text-box">
+      <h3>🌟 Soft Skills Highlights</h3>
+      <div class="badge-list">
+        <div class="badge">Team Collaboration</div>
+        <div class="badge">Empathy</div>
+        <div class="badge">Time Management</div>
+        <div class="badge">Adaptability</div>
+        <div class="badge">Leadership</div>
+        <div class="badge">Conflict Resolution</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('skillChart').getContext('2d');
+
+    new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: [
+          'Client Communication',
+          'Team Leading',
+          'Creative Thinking',
+          'Excel/Data Analysis',
+          'Project Management'
+        ],
+        datasets: [{
+          label: 'Skill Level',
+          data: [97, 95, 85, 79, 87],
+          backgroundColor: 'rgba(216, 112, 255, 0.3)',
+          
+          borderColor: '#ff69d4',
+          borderWidth: 2,
+          pointBackgroundColor: '#fff',
+          pointBorderColor: '#ff66d4',
+        }]
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 1500,
+          easing: 'easeOutExpo'
+        },
+        plugins: {
+          legend: {
+            display: false
+          }
+        },
+        scales: {
+          r: {
+            angleLines: {
+              color: '#663399'
+            },
+            grid: {
+              color: '#663399'
+            },
+            pointLabels: {
+              color: '#fff',
+              font: {
+                size: 14
+              }
+            },
+            ticks: {
+              color: '#fff',
+              stepSize: 20,
+              max: 100,
+              backdropColor: 'transparent'
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+            
             <h2>Skills</h2>
             <div class="skill-icons">
               <div class="skill">
+
+
+
+
+
+
+
+
+
+
+
+                
                 <img src="i5.png" alt="Excel">
 
               </div>
@@ -314,6 +585,7 @@
     </div>
   </div>
 </section>
+
 
 
 
@@ -869,7 +1141,63 @@ color: white; padding: 40px 20px; border-radius: 40px; margin: 40px auto; max-wi
 
 
 
-<style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -889,7 +1217,99 @@ color: white; padding: 40px 20px; border-radius: 40px; margin: 40px auto; max-wi
       background: linear-gradient(to right, #e3dee2, #ce8ee3);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
+    }
+
+    .toggle-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .toggle-wrapper.hidden {
+      opacity: 0;
+      transform: scale(0.9);
+      pointer-events: none;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px; width: 26px;
+      left: 4px; bottom: 4px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #8f44fd;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .toggle-label {
+      font-size: 18px;
+      color: #e0c8f2;
+    }
+
+    .music-wrapper {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      margin-bottom: 30px;
+      pointer-events: none;
+    }
+
+    .music-wrapper.visible {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: all;
+    }
+
+    .music-button {
+      background: linear-gradient(45deg, #ff00cc, #3333ff);
+      border: none;
+      padding: 12px 20px;
+      color: white;
+      font-size: 16px;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(255, 0, 255, 0.4);
+      transition: 0.3s ease;
+    }
+
+    .music-button:hover {
+      background: linear-gradient(45deg, #3333ff, #ff00cc);
+      box-shadow: 0 6px 25px rgba(255, 0, 255, 0.6);
     }
 
     .poem-grid {
@@ -903,19 +1323,22 @@ color: white; padding: 40px 20px; border-radius: 40px; margin: 40px auto; max-wi
       padding: 25px;
       border-radius: 20px;
       box-shadow: 0 10px 25px rgba(255, 0, 255, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
       min-height: 350px;
+      position: relative;
+      overflow: hidden;
     }
 
     .poem-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 20px 35px rgba(255, 0, 255, 0.3);
     }
 
     .poem-title {
       font-size: 22px;
       color: #ff66d4;
       margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
     }
 
     .poem-content {
@@ -925,11 +1348,45 @@ color: white; padding: 40px 20px; border-radius: 40px; margin: 40px auto; max-wi
       white-space: pre-line;
       text-align: left;
       min-height: 200px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .poem-card::before {
+      content: "";
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border-radius: 20px;
+      z-index: 0;
+      transition: opacity 0.6s ease;
+    }
+
+    .poem-card.reveal-bg::before {
+      opacity: 0.5;
+    }
+
+    .poem1::before {
+      background-image: url('st.jpg');
+    }
+
+    .poem2::before {
+      background-image: url('koni.png');
+    }
+
+    .poem3::before {
+      background-image: url('ch2.png');
     }
 
     @media (max-width: 500px) {
       .creative-section h1 {
         font-size: 28px;
+      }
+
+      .toggle-label {
+        font-size: 16px;
       }
     }
   </style>
@@ -938,51 +1395,76 @@ color: white; padding: 40px 20px; border-radius: 40px; margin: 40px auto; max-wi
   <section class="creative-section" id="creative-corner">
     <h1>🎨 Creative Corner – माझ्या कविता</h1>
 
+    <div class="toggle-wrapper" id="toggleWrapper">
+      <label class="switch">
+        <input type="checkbox" id="poemToggle" />
+        <span class="slider"></span>
+      </label>
+      <span class="toggle-label">पूर्ण वाचण्यासाठी क्लिक करा</span>
+    </div>
+
+    <div class="music-wrapper" id="musicWrapper">
+      <button id="musicToggle" class="music-button">🎵 Play Music</button>
+    </div>
+
     <div class="poem-grid">
-      <div class="poem-card">
+      <div class="poem-card poem1">
         <div class="poem-title">ती स्त्री...</div>
-        <div class="poem-content" id="poem1"></div>
+        <div class="poem-content" id="poem1">समाजाने तिला नेहमी नाकारले
+तिने मात्र शून्यातून स्वतःचे अस्तित्व उभारले
+...
+</div>
       </div>
-      <div class="poem-card">
+      <div class="poem-card poem2">
         <div class="poem-title">कुणीतरी असावं...</div>
-        <div class="poem-content" id="poem2"></div>
+        <div class="poem-content" id="poem2">कुणीतरी असावं पेलं तरी आपली वाट पाहणारं...
+चुकलंच जर कधी तर अलगद सावरणारं
+...
+</div>
       </div>
-      <div class="poem-card">
+      <div class="poem-card poem3">
         <div class="poem-title">चलो कुछ...(शायरी)</div>
-        <div class="poem-content" id="poem3"></div>
+        <div class="poem-content" id="poem3">चलो कुछ बातें बदल देते हैं किसी से माफ़ी माँग लेते हैं,
+किसी को माफ़ कर देते हैं ज़िंदगी दो पल की है,
+...
+</div>
       </div>
     </div>
+
+    <audio id="bgMusic" loop>
+      <source src="song.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
   </section>
 
   <script>
     const poems = [
       {
         id: "poem1",
-        text: `समाजाने तिला नेहमी नाकारले  
-तिने मात्र शून्यातून स्वतःचे अस्तित्व उभारले  
+        text: `समाजाने तिला नेहमी नाकारले
+तिने मात्र शून्यातून स्वतःचे अस्तित्व उभारले
+जन्म घेऊन तिने अनेक नाती जोडली
+जन्म देऊन तिने नाते निभावली
 
-जन्म घेऊन तिने अनेक नाती जोडली  
-जन्म देऊन तिने नाते निभावली  
+जिजाऊंनी रचला जसा स्वराज्याचा पाया
+सिंधुताईनी लावली तशी अनाथांना माया
 
-जिजाऊंनी रचला जसा स्वराज्याचा पाया  
-सिंधुताईनी लावली तशी अनाथांना माया  
+स्त्री शिक्षणाचे महत्त्व सावित्रीबाईनी सांगितले
+कठीण परिस्थितीमधे देशाने आनंदीला डॉक्टर होताना पाहिले
 
-स्त्री शिक्षणाचे महत्त्व सावित्रीबाईनी सांगितले  
-कठीण परिस्थितीमधे देशाने आनंदीला डॉक्टर होताना पाहिले  
+अस्तित्वाच्या शर्यतीत पी.टी. उषा धावली
+चंद्रावर पाऊल ठेवणारी कल्पना स्त्री पहिली
 
-अस्तित्वाच्या शर्यतीत पी.टी. उषा धावली  
-चंद्रावर पाऊल ठेवणारी कल्पना स्त्री पहिली  
+प्रत्येक क्षेत्रात तिने तिचे वर्चस्व गाजवले
+चूल आणि मूल या प्रथेला थांबवले
 
-प्रत्येक क्षेत्रात तिने तिचे वर्चस्व गाजवले  
-चूल आणि मूल या प्रथेला थांबवले  
+ही तर फक्त काही नावे झाली...
+इतिहासाच्या पानांवर तिने तिची मोहोर उमटवली
 
-ही तर फक्त काही नावे झाली...  
-इतिहासाच्या पानांवर तिने तिची मोहोर उमटवली  
+ती चा गौरव करूया, तिला प्रणाम करूया
+ती आहे म्हणून हे विश्व आहे, तिच्यामुळे जगण्याला अर्थ आहे
 
-ती चा गौरव करूया, तिला प्रणाम करूया  
-ती आहे म्हणून हे विश्व आहे, तिच्यामुळे जगण्याला अर्थ आहे  
-
-स्वतः सोबतच सगळ्यांच्या आयुष्य ती घडवते म्हणूनच ती...  
+स्वतः सोबतच सगळ्यांच्या आयुष्य ती घडवते म्हणूनच ती...
 स्त्री म्हणून मानाने मिरवते`
       },
       {
@@ -1017,7 +1499,7 @@ color: white; padding: 40px 20px; border-radius: 40px; margin: 40px auto; max-wi
       },
       {
         id: "poem3",
-        text: `चलो कुछ बातें बदल देते हैं किसी से माफ़ी माँग लेते हैं, 
+        text: `चलो कुछ बातें बदल देते हैं किसी से माफ़ी माँग लेते हैं,
 किसी को माफ़ कर देते हैं ज़िंदगी दो पल की है,
 तो क्यों ना अपनों के साथ कुछ हसीन यादें बुन लेते हैं
 
@@ -1047,9 +1529,9 @@ color: white; padding: 40px 20px; border-radius: 40px; margin: 40px auto; max-wi
       }
     ];
 
-    // Start all typing animations simultaneously
     function typePoemSimultaneous(id, text) {
       const container = document.getElementById(id);
+      container.innerHTML = "";
       let i = 0;
       const speed = 20;
       function type() {
@@ -1062,14 +1544,83 @@ color: white; padding: 40px 20px; border-radius: 40px; margin: 40px auto; max-wi
       type();
     }
 
-    // Call typing for each poem at once
-    poems.forEach(poem => typePoemSimultaneous(poem.id, poem.text));
+    const bgMusic = document.getElementById('bgMusic');
+    bgMusic.volume = 0.2;
+
+    document.getElementById("poemToggle").addEventListener("change", function () {
+      const toggleWrapper = document.getElementById("toggleWrapper");
+      const musicWrapper = document.getElementById("musicWrapper");
+      const music = document.getElementById("bgMusic");
+
+      if (this.checked) {
+        poems.forEach(poem => typePoemSimultaneous(poem.id, poem.text));
+        music.play();
+        toggleWrapper.classList.add("hidden");
+        setTimeout(() => musicWrapper.classList.add("visible"), 600);
+      }
+    });
+
+    document.getElementById("musicToggle").addEventListener("click", () => {
+      const music = document.getElementById("bgMusic");
+      const btn = document.getElementById("musicToggle");
+      if (music.paused) {
+        music.play();
+        btn.textContent = "⏸️ Pause Music";
+      } else {
+        music.pause();
+        btn.textContent = "🎵 Play Music";
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-bg');
+        }
+      });
+    }, {
+      threshold: 0.4
+    });
+
+    document.querySelectorAll('.poem-card').forEach(card => {
+      observer.observe(card);
+    });
   </script>
 
 
 
 
 
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+      
+
+
+
+
+
+
+      
+
+
+      
 
 
 
@@ -1155,6 +1706,29 @@ color: white; padding: 40px 20px; border-radius: 40px; margin: 40px auto; max-wi
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </footer>
 
   <!-- 💬 Font Awesome CDN for Icons -->
@@ -1185,7 +1759,6 @@ color: white; padding: 40px 20px; border-radius: 40px; margin: 40px auto; max-wi
         document.getElementById("location-info").textContent = "📍 Location not found";
       });
   </script>
-
 
 
 
