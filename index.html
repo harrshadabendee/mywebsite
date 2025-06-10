@@ -369,6 +369,8 @@
               <script>
                 const ctxMini = document.getElementById('miniSkillChart').getContext('2d');
               
+                const pointLabelFontSize = window.innerWidth < 480 ? 10 : window.innerWidth < 768 ? 11 : 13;
+              
                 new Chart(ctxMini, {
                   type: 'radar',
                   data: {
@@ -400,19 +402,24 @@
                     plugins: {
                       legend: { display: false }
                     },
+                    layout: {
+                      padding: 20
+                    },
                     scales: {
                       r: {
                         angleLines: { color: '#6b1a94' },
                         grid: { color: '#6b1a94' },
                         pointLabels: {
                           color: '#fff',
-                          font: { size: 13 }
+                          font: { size: pointLabelFontSize },
+                          padding: 8
                         },
                         ticks: {
                           color: '#fff',
                           stepSize: 20,
                           max: 100,
-                          backdropColor: 'transparent'
+                          backdropColor: 'transparent',
+                          display: false
                         }
                       }
                     }
@@ -465,8 +472,8 @@
                 }
               
                 .chart-wrapper {
-                  width: 550px;  /* ⬅️ wider */
-                  height: 340px; /* ⬅️ shorter */
+                  width: 550px;
+                  height: 340px;
                   position: relative;
                 }
               
@@ -536,8 +543,9 @@
                   }
               
                   .chart-wrapper {
-                    width: 360px;
-                    height: 320px;
+                    width: 100%;
+                    max-width: 420px;
+                    height: 300px;
                   }
               
                   .badge {
@@ -548,8 +556,8 @@
               
                 @media (max-width: 480px) {
                   .chart-wrapper {
-                    width: 320px;
-                    height: 300px;
+                    max-width: 360px;
+                    height: 280px;
                   }
               
                   .badge {
@@ -1695,6 +1703,25 @@ color: white; padding: 40px 20px; border-radius: 40px; margin: 40px auto; max-wi
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
 
